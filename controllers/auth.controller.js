@@ -1,4 +1,3 @@
-import { doc } from '../config/database.js';
 import { getAllUser } from '../models/userModel.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';

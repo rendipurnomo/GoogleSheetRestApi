@@ -42,6 +42,14 @@ app.use('/api', productRoute);
 app.use('/api', userRoute);
 app.use('/api', authRoute);
 
-app.listen(5000, () => {
-  console.log('Server is running on port 5000');
+app.get('/', (req, res) => {
+  res.send({
+    message: 'Hello Friend!',
+    author: 'Rendi Purnomo'
+  });
+})
+
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log('Server is running on port ' + port);
 })
